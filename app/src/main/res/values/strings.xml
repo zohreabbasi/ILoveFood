@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">I Love Food</string>
+    <string name ="RUdiet">Are you on a diet?</string>
+    <string name = "recipes">Recipes</string>
+    <string name="select_food_item">Select Food Item</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!--category of recipe
+    -->
+    <string name = "breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="soups">Soups</string>
+    <string name="salads">Salads</string>
+    <string name="desserts">Desserts</string>
+    <string name="entertaining">Entertaining</string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_dark"
+    android:orientation="vertical"
+    android:weightSum="12"
+    tools:context="com.poplar.isun.ilovefood.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/header" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        android:layout_gravity="start"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/select_food_item"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <CheckBox
+        android:id="@+id/cb_breakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="26dp"
+        android:layout_weight="1"
+        android:text="@string/breakfast" />
+
+    <CheckBox
+        android:id="@+id/cb_lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_weight="1"
+        android:text="@string/lunch" />
+
+    <CheckBox
+        android:id="@+id/cb_soups"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="26dp"
+        android:layout_weight="1"
+        android:text="@string/soups" />
+
+    <CheckBox
+        android:id="@+id/cb_desserts"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_weight="1"
+        android:text="@string/desserts" />
+
+
+    <CheckBox
+        android:id="@+id/cb_salads"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="26dp"
+        android:layout_weight="1"
+        android:text="@string/salads" />
+
+    <Switch
+        android:id="@+id/sw_diet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:checked="false"
+        android:text="@string/RUdiet"
+        android:textColor="@android:color/white"
+        android:textOff="@string/no"
+        android:textOn="@string/yes"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_OK"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+
+        android:layout_marginTop="25dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_green_dark"
+        android:text="@string/recipes"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
