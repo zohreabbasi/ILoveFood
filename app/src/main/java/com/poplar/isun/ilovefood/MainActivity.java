@@ -1,9 +1,9 @@
 package com.poplar.isun.ilovefood;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     String temp = "";
 
+    Boolean flag_diet;
+
+
+    TextView Questionnair;
+    static final  String Extra_food = "food";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +38,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
               if(isChecked){
                   Toast.makeText(MainActivity.this,"Yes",Toast.LENGTH_SHORT).show();
+                  flag_diet = true;
               }
               else {
                   Toast.makeText(MainActivity.this,"No",Toast.LENGTH_SHORT).show();
+                  flag_diet = false;
 
               }
 
@@ -60,11 +67,16 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                 Toast.makeText(MainActivity.this,temp,Toast.LENGTH_LONG).show();
             }
         });
-
-
-
-
-
+        Questionnair = (TextView) findViewById(R.id.tv_questioner);
+        Questionnair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(MainActivity.this,QuestionnairActivity.class);
+                intent.putExtra(Extra_food,temp);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
     //Step #3 Handle Checkbox events using onCheckedChanged() method.
@@ -80,16 +92,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     }
 
-    //Step #3 Handle Checkbox events using onCheckedChanged() method.
-   /* @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if (isChecked) {
-            temp = temp + buttonView.getText()+" , ";
-        } else {
-            temp = temp.replace(buttonView.getText(), "");
-        }
-
-    }*/
 
 
 }

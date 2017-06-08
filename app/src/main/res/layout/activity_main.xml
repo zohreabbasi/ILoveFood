@@ -107,5 +107,16 @@
         android:text="@string/recipes"
         android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/Go_Questionnaire"
+        android:textStyle="bold"
+        android:id="@+id/tv_questioner"
+        />
+
 
 </LinearLayout>

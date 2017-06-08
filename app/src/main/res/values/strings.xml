@@ -1,16 +1,39 @@
 <resources>
     <string name="app_name">I Love Food</string>
-    <string name ="RUdiet">Are you on a diet?</string>
-    <string name = "recipes">Recipes</string>
+    <string name="RUdiet">Are you on a diet?</string>
+    <string name="recipes">Recipes</string>
     <string name="select_food_item">Select Food Item</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <!--category of recipe
     -->
-    <string name = "breakfast">Breakfast</string>
+    <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="soups">Soups</string>
     <string name="salads">Salads</string>
     <string name="desserts">Desserts</string>
     <string name="entertaining">Entertaining</string>
+
+    <string name="list_food">List of  </string>
+
+    <string name="Questionnaire">"I Love Food" App Questionnaire </string>
+    <string name="Go_Questionnaire">Questionnaire  - > </string>
+    <string name="Question_1"> How easy is it to find the information you are looking for in "I Love Food" apps?</string>
+    <string name="Answer1_Question_1">Extremely easy </string>
+    <string name="Answer2_Question_1">Very easy </string>
+
+    <string name="Answer3_Question_1">Moderately easy </string>
+
+    <string name="Answer4_Question_1">Slightly easy </string>
+    <string name="Answer5_Question_1">Not at all easy </string>
+
+
+    <string name="Question_2"> How likely are you to recommend "I Love Food" apps to others?</string>
+    <string name="Answer1_Question_2"> Very likely </string>
+    <string name="Answer2_Question_2"> Moderately likely</string>
+
+    <string name="Answer3_Question_2">Not at all likely </string>
+    <string name="done">Done</string>
+
+
 </resources>
