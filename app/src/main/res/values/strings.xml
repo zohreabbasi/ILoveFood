@@ -35,5 +35,8 @@
     <string name="Answer3_Question_2">Not at all likely </string>
     <string name="done">Done</string>
 
+    <string name="TypeAllergy">Types of Food Allergy</string>
+    <string name="Allergy">Allergy</string>
+
 
 </resources>

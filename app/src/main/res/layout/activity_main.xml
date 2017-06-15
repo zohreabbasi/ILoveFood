@@ -94,29 +94,48 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_OK"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-
         android:layout_marginTop="25dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_green_dark"
-        android:text="@string/recipes"
-        android:textStyle="bold" />
+        android:layout_gravity="center"
+
+        >
+
+        <Button
+            android:id="@+id/btn_OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="@string/recipes"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_Allergy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@android:color/holo_green_dark"
+            android:text="@string/Allergy"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 
     <TextView
+        android:id="@+id/tv_questioner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="@string/Go_Questionnaire"
-        android:textStyle="bold"
-        android:id="@+id/tv_questioner"
-        />
+        android:textStyle="bold" />
 
 
 </LinearLayout>

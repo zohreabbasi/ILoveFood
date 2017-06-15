@@ -12,11 +12,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener{
+public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     //Step #1 Declare a Variable
     CheckBox breakfast, lunch, soups, desserts, salads;
-    Button Ok;
+    Button Recipes,Allergy;
     Switch diet;
 
     String temp = "";
@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
 
     TextView Questionnair;
-    static final  String Extra_food = "food";
+    static final String Extra_food = "food";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,15 +37,14 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         diet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-              if(isChecked){
-                  Toast.makeText(MainActivity.this,"Yes",Toast.LENGTH_SHORT).show();
-                  flag_diet = true;
-              }
-              else {
-                  Toast.makeText(MainActivity.this,"No",Toast.LENGTH_SHORT).show();
-                  flag_diet = false;
+                if (isChecked) {
+                    Toast.makeText(MainActivity.this, "Yes", Toast.LENGTH_SHORT).show();
+                    flag_diet = true;
+                } else {
+                    Toast.makeText(MainActivity.this, "No", Toast.LENGTH_SHORT).show();
+                    flag_diet = false;
 
-              }
+                }
 
             }
         });
@@ -59,39 +59,47 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         desserts.setOnCheckedChangeListener(this);
         salads = (CheckBox) findViewById(R.id.cb_salads);
         salads.setOnCheckedChangeListener(this);
-        Ok = (Button) findViewById(R.id.btn_OK);
+        Recipes = (Button) findViewById(R.id.btn_OK);
 
-        Ok.setOnClickListener(new View.OnClickListener() {
+        Recipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,temp,Toast.LENGTH_LONG).show();
+
             }
         });
         Questionnair = (TextView) findViewById(R.id.tv_questioner);
         Questionnair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(MainActivity.this,QuestionnairActivity.class);
-                intent.putExtra(Extra_food,temp);
+                Intent intent = new Intent(MainActivity.this, QuestionnairActivity.class);
+                intent.putExtra(Extra_food, temp);
                 startActivity(intent);
                 finish();
             }
         });
+        Allergy = (Button) findViewById(R.id.btn_Allergy);
+        Allergy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AllergyListActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
+
     //Step #3 Handle Checkbox events using onCheckedChanged() method.
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        if(isChecked){
-            temp = temp +buttonView.getText()+",";
-        }
-        else {
-            temp = temp.replace(buttonView.getText()," ");
+        if (isChecked) {
+            temp = temp + buttonView.getText() + ",";
+        } else {
+            temp = temp.replace(buttonView.getText(), " ");
         }
 
 
     }
-
 
 
 }
