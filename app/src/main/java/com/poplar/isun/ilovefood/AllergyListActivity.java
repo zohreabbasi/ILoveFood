@@ -6,23 +6,31 @@ import android.os.Bundle;
 import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class AllergyListActivity extends ListActivity {
+public class AllergyListActivity extends ListActivity implements AdapterView.OnItemSelectedListener {
 
     String[] Allergy_item = {"Corn Allergy", "Egg Allergy", "Fish Allergy", "Meat Allergy", "Milk Allergy", "Peanut Allergy", "Shellfish Allergy", "Tree Nut Allergy", "Wheat Allergy", "FPIES Allergy"};
+
 
     Button done;
     TextView text;
 
     ArrayAdapter<String> adapter;
+
+    Spinner FemaleORMale,Age;
+    String[] FemaleOrMale_item = {"Female","Male"};
+    ArrayAdapter<String> FemaleOrMale_adapter;
+    ArrayAdapter<CharSequence> Age_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +74,38 @@ public class AllergyListActivity extends ListActivity {
             }
         });
 
+        FemaleORMale = (Spinner) findViewById(R.id.MaleOrFemale_spinner);
+        Age = (Spinner) findViewById(R.id.age_spinner);
+
+        FemaleOrMale_adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,FemaleOrMale_item);
+        FemaleOrMale_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        FemaleORMale.setAdapter(FemaleOrMale_adapter);
+
+        FemaleORMale.setOnItemSelectedListener(this);
+
+        Age_adapter =ArrayAdapter.createFromResource(this,R.array.age_array,android.R.layout.simple_spinner_item);
+        Age_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Age.setAdapter(Age_adapter);
+
+        Age.setOnItemSelectedListener(this);
+
+
+
+
+
+    }
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String temp = parent.getItemAtPosition(position).toString();
+
+        Toast.makeText(AllergyListActivity.this,temp,Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
 
     }
 }

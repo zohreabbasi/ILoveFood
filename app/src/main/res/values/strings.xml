@@ -38,5 +38,19 @@
     <string name="TypeAllergy">Types of Food Allergy</string>
     <string name="Allergy">Allergy</string>
 
+    <string name="age">Age: </string>
+    <string name="F_OR_M">Are you female or male?</string>
+
+
+    <string-array name="age_array">
+        <item>Children (00 &#8211; 14 years)</item>
+        <item>Youth (15&#8211;24 years)</item>
+        <item>Adults (25&#8211;64 years)</item>
+        <item>Seniors (65 years and over)</item>
+    </string-array>
+
+
+
+
 
 </resources>
