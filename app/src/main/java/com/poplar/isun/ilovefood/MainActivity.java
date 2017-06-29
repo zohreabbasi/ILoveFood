@@ -64,6 +64,9 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         Recipes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });
