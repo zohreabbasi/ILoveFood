@@ -2,6 +2,7 @@ package com.poplar.isun.ilovefood;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.AdapterView;
@@ -42,6 +43,8 @@ public class CategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(getClass().getSimpleName(),"onCreate");
+
         setContentView(R.layout.activity_category);
 
         Category_grid = (GridView) findViewById(R.id.grid);
@@ -59,4 +62,47 @@ public class CategoryActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    protected void onResume() {
+        Log.d(getClass().getSimpleName(),"onResume");
+
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.d(getClass().getSimpleName(),"onPause");
+
+        super.onPause();
+    }
+
+    @Override
+    protected void onStart() {
+        Log.d(getClass().getSimpleName(),"onStart");
+
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(getClass().getSimpleName(),"onStop");
+
+        super.onStop();
+    }
+
+    @Override
+    protected void onRestart() {
+        Log.d(getClass().getSimpleName(),"onRestart");
+
+        super.onRestart();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(getClass().getSimpleName(),"onDestroy");
+
+        super.onDestroy();
+    }
+
+
 }

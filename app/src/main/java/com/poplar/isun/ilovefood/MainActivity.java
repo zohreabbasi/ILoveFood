@@ -3,6 +3,7 @@ package com.poplar.isun.ilovefood;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d(getClass().getSimpleName(),"onCreate");
 
         //Step #2 FindViewByID
         diet = (Switch) findViewById(R.id.sw_diet);
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
                 startActivity(intent);
-                finish();
+
 
             }
         });
@@ -105,4 +107,44 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     }
 
 
+    @Override
+    protected void onResume() {
+        Log.d(getClass().getSimpleName(),"onResume");
+
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.d(getClass().getSimpleName(),"onPause");
+
+        super.onPause();
+    }
+
+    @Override
+    protected void onStart() {
+        Log.d(getClass().getSimpleName(),"onStart");
+
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.d(getClass().getSimpleName(),"onStop");
+
+        super.onStop();
+    }
+
+    @Override
+    protected void onRestart() {
+        Log.d(getClass().getSimpleName(),"onRestart");
+
+        super.onRestart();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(getClass().getSimpleName(),"onDestroy");
+        super.onDestroy();
+    }
 }
