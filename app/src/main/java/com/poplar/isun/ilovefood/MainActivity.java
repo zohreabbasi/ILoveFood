@@ -17,14 +17,12 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     //Step #1 Declare a Variable
     CheckBox breakfast, lunch, soups, desserts, salads;
-    Button Recipes,Allergy;
+    Button Recipes,Allergy , Multi_Pane;
     Switch diet;
 
     String temp = "";
 
     Boolean flag_diet;
-
-
     TextView Questionnair;
     static final String Extra_food = "food";
 
@@ -91,6 +89,16 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             }
         });
 
+       Multi_Pane =(Button)findViewById(R.id.btn_multi_pane);
+        Multi_Pane.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MultiPane_Activity.class);
+                startActivity(intent);
+
+            }
+        });
+
 
     }
 
@@ -102,7 +110,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         } else {
             temp = temp.replace(buttonView.getText(), " ");
         }
-
 
     }
 

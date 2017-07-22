@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".QuestionnairActivity" />
         <activity android:name=".AllergyListActivity" />
-        <activity android:name=".CategoryActivity"></activity>
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".Multi_PaneActivity" />
+        <activity android:name=".MultiPane_Activity"></activity>
     </application>
 
 </manifest>

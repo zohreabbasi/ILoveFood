@@ -49,5 +49,7 @@
         <item>Seniors (65 years and over)</item>
     </string-array>
 
-
+    <string name="multi_pane">Multi Pane</string>
+    <string name="main_pane">Main Pane</string>
+    <string name="side_pane">Side_Pane</string>
 </resources>
