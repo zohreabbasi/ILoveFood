@@ -10,17 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".QuestionnairActivity" />
+        <activity android:name=".AllergyListActivity" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".MultiPane_Activity" />
+        <activity android:name=".HelpActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuestionnairActivity" />
-        <activity android:name=".AllergyListActivity" />
-        <activity android:name=".CategoryActivity" />
-        <activity android:name=".Multi_PaneActivity" />
-        <activity android:name=".MultiPane_Activity"></activity>
     </application>
 
 </manifest>

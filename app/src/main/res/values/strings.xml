@@ -48,6 +48,16 @@
         <item>Adults (25&#8211;64 years)</item>
         <item>Seniors (65 years and over)</item>
     </string-array>
+    <string-array name="contents_help_array">
+        <item>Brief help text permanently embedded in the interface. Writing full sentences explaining a feature or the outcome of actions your user is about to take can be a powerful concept. It will help new users understand things better and reassure existing users in what they’re about to do.</item>
+        <item>Surprisingly many websites and web applications nowadays have extremely short labels with no explanations next to their form fields. Unless you intrinsically understand the feature, you’re lost. With embedded instructions you replace the “Name” label of your form with “Name the project”, and perhaps you even add an example or two as well (see above screenshot). This guides the user through the screen.</item>
+        <item>This is of course a balancing act. When dealing with simple screens and features that are used frequently (e.g. adding a to-do item to a task manager), embedded help may be overkill. However, for screens that aren’t used frequently and features that aren’t necessarily intuitive, embedded help can be a great choice.</item>
+    </string-array>
+    <string-array name="titles_help_array">
+        <item>Step 1</item>
+        <item>Step 2 </item>
+        <item>Step 3 </item>
+    </string-array>
 
     <string name="multi_pane">Multi Pane</string>
     <string name="main_pane">Main Pane</string>
