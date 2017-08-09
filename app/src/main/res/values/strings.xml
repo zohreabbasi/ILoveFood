@@ -62,4 +62,7 @@
     <string name="multi_pane">Multi Pane</string>
     <string name="main_pane">Main Pane</string>
     <string name="side_pane">Side_Pane</string>
+
+    <string name="item_menu_help">Help</string>
+    <string name="item_menu_about">About App</string>
 </resources>
