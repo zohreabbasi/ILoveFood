@@ -13,4 +13,9 @@
         android:title="@string/item_menu_help"
         app:showAsAction="ifRoom"
        ></item>
+    <item
+        android:id="@+id/web_page_menu"
+        android:icon="@drawable/ic_web_page_black_24dp"
+        android:title="@string/item_menu_web_page"
+        app:showAsAction="ifRoom"></item>
 </menu>

@@ -1,6 +1,7 @@
 package com.poplar.isun.ilovefood;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -132,6 +133,14 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                // Toast.makeText(getApplicationContext(),"HELP",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,HelpActivity.class);
                 startActivity(intent);
+                return true;
+            case R.id.web_page_menu:
+               /* Uri uri = Uri.parse("http://google.com");
+                Intent web_page = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(web_page);
+                */
+                Intent web_page = new Intent(MainActivity.this,WebPageActivity.class);
+                startActivity(web_page);
                 return true;
         }
         return super.onOptionsItemSelected(item);

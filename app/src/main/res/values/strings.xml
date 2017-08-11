@@ -65,4 +65,5 @@
 
     <string name="item_menu_help">Help</string>
     <string name="item_menu_about">About App</string>
+    <string name="item_menu_web_page">Web page</string>
 </resources>
