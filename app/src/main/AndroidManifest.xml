@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,9 @@
         <activity android:name=".AllergyListActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".MultiPane_Activity" />
-        <activity android:name=".HelpActivity"></activity>
-        <activity android:name=".WebPageActivity"></activity>
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".WebPageActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
